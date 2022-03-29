@@ -1,23 +1,22 @@
-/*
-* Model, Views, estrutura do Controllers para atualizar os dados inseridos no database.
-*/
-
 <?php
 
-class Index extends Controller 
+/**
+* 	Model, Views, estrutura do Controllers para atualizar os dados inseridos no database.
+*/
+class Index extends Controller
 {
-	function __construct() 
+	function __construct()
 	{
 		parent::__construct();
 	}
 
-	function index() 
+	function index()
 	{
 		$this->view->allrecords = $this->model->getAllrecords();
 		$this->view->render('index/index');
 	}
 
-	function editIndex() 
+	function editIndex()
 	{
 		$data = $_GET;
 
@@ -33,7 +32,7 @@ class Index extends Controller
 
 	}
 
-	function editSubmitIndex() 
+	function editSubmitIndex()
 	{
 		$arg = $_POST['id'];
 		$data = [

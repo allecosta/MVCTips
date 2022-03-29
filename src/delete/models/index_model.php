@@ -1,22 +1,21 @@
-/*
-* Arquivo model utilizado para deletar os dados no banco de dados.
-*/
+<?php
 
-<?php 
-
-class IndexModel extends Model 
+/**
+* 	Arquivo model utilizado para deletar os dados no banco de dados.
+*/ 
+class IndexModel extends Model
 {
-	public function __construct() 
+	public function __construct()
 	{
 		parent::__construct();
 	}
 
-	public function getAllrecords() 
+	public function getAllrecords()
 	{
 		return $this->db->select("SELECT * FROM `mvc` ORDER BY id DESC");
 	}
 
-	public function deleteIndex($id) 
+	public function deleteIndex($id)
 	{
 		$this->db->delete('mvc', "`id` = {$id}");
 	}

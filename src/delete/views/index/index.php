@@ -1,7 +1,3 @@
-/*
-* Arquivo index da pasta views/index contendo a tabela
-*/
-
 <table border="2" id="internalActivities" style="width: 100%" class="table table-bordered">
 	<tr>
 		<th>Nome</th>

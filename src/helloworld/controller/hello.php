@@ -1,15 +1,12 @@
-/*
-* Model: É um arquivo de classe que contém as consultas de conectividade do banco de dados
-
-* Controller: Este é o acesso ao arquivo dos métodos e variáveis declarados
-
-* View: Contém todos os html e página de exibição.
-
-*/
-
 <?php
 
-class Hello extends Controller 
+/**
+* 	Model: É um arquivo de classe que contém as consultas de conectividade do banco de dados
+* 	Controller: Este arquivo acessa os métodos e variáveis declarados
+* 	View: Contém todo o html e página de exibição.
+*/
+
+class Hello extends Controller
 {
 	function __contruct()
 	{
@@ -20,5 +17,5 @@ class Hello extends Controller
 	{
 		$this->view->render('hello/index');
 	}
-	
+
 }

@@ -1,23 +1,22 @@
-/*
-* Deletando dados em um banco de dados
+<?php
+
+/**
+* Deletando dados no banco de dados
 */
-
-<?php 
-
-class Index extends Controller 
+class Index extends Controller
 {
-	function __construct() 
+	function __construct()
 	{
 		parent::__construct();
 	}
 
-	function index() 
+	function index()
 	{
 		$this->view->allrecords = $this->model->getAllrecords();
 		$this->view->render('index/index');
 	}
 
-	function deleteIndex($id) 
+	function deleteIndex($id)
 	{
 		$this->model->deleteIndex($id);
 		header('location: ../index/index');

@@ -1,23 +1,22 @@
-/*
-* Visualizando dados em um banco de dados
-*/
-
 <?php
 
-class Index extends Controller 
+/**
+* Visualizando dados no banco de dados
+*/
+class Index extends Controller
 {
-	function __construct() 
+	function __construct()
 	{
 		parent::__construct();
 	}
 
-	function index() 
+	function index()
 	{
 		$this->view->allrecords = $this->model->getAllrecords();
 		$this->view->render('index/index');
 	}
 
-	function viewIndex() 
+	function viewIndex()
 	{
 		$data = $_GET;
 
